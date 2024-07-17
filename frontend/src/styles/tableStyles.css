@@ -1,0 +1,115 @@
+/* src/styles/tableStyles.css */
+table {
+    border-collapse: collapse;
+    width: 100%; /* Уменьшаем ширину таблицы на 40px */
+    min-width: 800px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  th {
+    background-color: #eaf5fa;
+    color: #000000;
+  }
+  td {
+    white-space: nowrap; /* Предотвращаем перенос строк внутри ячеек */
+  }
+  
+  .table-container {
+    margin-left: 40px; /* Сдвигаем таблицу направо на 40px */
+    padding-left: 200px; /* ширина левой панели */
+  }
+  
+
+  tbody{
+    padding-left: 50px;
+  }
+
+  headerTable {
+    background-color:darkgray;
+    color: #000000;
+  }
+
+
+  .app-background {
+    background-color: #f8f8f8; /* Светло-серый фон */
+    min-height: 100vh; /* Минимальная высота */
+    display: flex;
+  }
+
+  .sidebar {
+    background-color: #2e3b4e; /* Темный цвет для панели слева */
+    color: white;
+    width: 250px;
+    padding: 20px;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 15px;
+  }
+
+  .content-area {
+    flex-grow: 1; /* Займет оставшееся пространство */
+    padding: 20px;
+  }
+  
+  .content-area h1 {
+    font-size: 24px; 
+  }
+
+
+  .custom-td{
+    background-color: #ffffff;
+    font-weight: bold;
+    color : black
+  }
+  /* src/styles/tableStyles.css */
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.data-management-container {
+  display: flex;
+  height: 100vh;
+}
+
+
+.sidebar {
+  width: 200px;
+  padding: 20px;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.content {
+  flex: 1;
+  margin-left: 20px;
+  overflow-x: auto;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
