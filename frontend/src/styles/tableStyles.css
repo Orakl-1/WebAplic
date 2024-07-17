@@ -94,7 +94,7 @@ table {
 
 .sidebar {
   width: 200px;
-  padding: 20px;
+  padding: 30px;
   background-color: #000000;
   position: fixed;
   top: 0;
@@ -112,4 +112,27 @@ table {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
+}
+.logout-button {
+  background-color: red;
+  
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  position: absolute;
+}
+
+.table-container{
+  padding-left: 200px;
+  
+}
+
+.position-table{
+  padding-top: 20%;
+}
+.LineButton {
+  border-top: 1px solid white;
+  margin: 10px 0;
 }

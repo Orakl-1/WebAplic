@@ -12,7 +12,8 @@ useEffect(() => {
   });
 }, []);
 return (
-  <div>
+  <div className='position-table'>
+
     <table style={{ borderCollapse: "collapse", width: "100%" }}>
       <thead className="headerTable" style={{ backgroundColor: "darkgray" }}>
         <tr>
@@ -27,6 +28,9 @@ return (
             <td>{user._id.substring(0, 5)}</td>
             <td>{user.lastname + " " + user.firstname + " " + user.middlename}</td>
             <td>{user.email}</td>
+      
+
+            
           </tr>
         ))}
       </tbody>

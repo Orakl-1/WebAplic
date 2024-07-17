@@ -70,6 +70,8 @@ const DataManagement = () => {
         {/* <button onClick={handleShowOverview}>Показать обзор</button> */}
         <button onClick={handleShowDepartments}>departments / подразделения</button>
         <button onClick={handleShowPosition}>positions / должности</button>
+        <div class ="LineButton"></div>
+        <button onClick="Create new">Создать новую запись</button>
         <LogoutButton />
       </aside>
       <main className='content'>

@@ -14,7 +14,8 @@ const UserTableName = () => {
     }, []);
     
     return (
-        <div>
+        <div className='position-table'>
+
             <table style={{ borderCollapse: "collapse", width: "100%" }}>
                 <thead className="headerTable" style={{ backgroundColor: "darkgray" }}>
                     <tr>
@@ -29,6 +30,8 @@ const UserTableName = () => {
                             <td>{user.id}</td>
                             <td>{user.email}</td>
                             <td>{user.isAuditor}</td>
+                            <td>{user.position}</td>
+                            <td>{user.plant}</td>
                         </tr>
                     ))}
                 </tbody>

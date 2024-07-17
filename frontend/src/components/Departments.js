@@ -13,7 +13,7 @@ const DepartmentsTeble = () => {
     }, []);
     
     return (
-        <div>
+        <div className='position-table'>
             <table style={{ borderCollapse: "collapse", width: "100%" }}>
                 <thead className="headerTable" style={{ backgroundColor: "darkgray" }}>
                     <tr>

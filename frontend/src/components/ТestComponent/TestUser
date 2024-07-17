@@ -1,0 +1,89 @@
+// src/components/UserTable.js
+import React, { useEffect, useState } from 'react';
+import { getUsers, getPositions, getPlants,getDepartments } from '../services/apiService';
+import '../styles/tableStyles.css';
+const UserTable = () => {
+  const [users, setUsers] = useState([]);
+  const [positions, setPositions] = useState([]);
+  const [departments, setDepartments] = useState([]);
+  const [plants, setPlants] = useState([]);
+  useEffect(() => {
+    
+    getUsers().then(response => {
+      setUsers(response.data);
+    }).catch(error => {
+      console.error('There was an error fetching the users!', error);
+    });
+    
+    getPositions().then(response => {
+      setPositions(response.data);
+    }).catch(error => {
+      console.error('There was an error fetching the positions!', error);
+    });
+    
+    getDepartments().then(response => {
+      setDepartments(response.data);
+    }).catch(error => {
+      console.error('There was an error fetching the departments!', error);
+    });
+    getPlants().then(response => {
+      setPlants(response.data);
+    }).catch(error => {
+      console.error('There was an error fetching the plants!', error);
+    })
+  }, []);
+  
+  return (
+
+    <div className='table-container'>
+      <h1>Users</h1>
+      <table >
+      <thead className="headerTable" style={{ backgroundColor: "darkgray" }}>
+      <tr>
+    <th style={{ textAlign: "left" }}>ID</th>
+    <th style={{ textAlign: "left" }}>Фамилия</th>
+    <th style={{ textAlign: "left" }}>Имя</th>
+    <th style={{ textAlign: "left" }}>Отчество</th>
+    <th style={{ textAlign: "left" }}>Email</th>
+    <th style={{ textAlign: "left" }}>Password</th>
+    <th style={{ textAlign: "left" }}>ID_Plant</th>
+    <th style={{ textAlign: "left" }}>ID_Department</th>
+    <th style={{ textAlign: "left" }}>ID_Position</th>
+    </tr>
+      </thead>
+
+        <tbody>
+          {users.map((user) => {
+            const position = positions.find((pos) => pos._id === user.position);
+            const department = departments.find(
+              (dep) => dep._id === user.department,
+            );
+            const plant = plants.find((pl) => pl._id === user.plant);
+
+            return (
+              <tr key={user._id}>
+                <td className=''>{user._id.substring(0, '5')}</td>
+                <td className=''>{user.lastname}</td>
+                <td className=''>{user.firstname}</td>
+                <td className=''>{user.middlename}</td>
+                <td className='' >{user.email}</td>
+                <td className=''>{user.password}</td>
+                <td className=''>{user.plant.substring(0, '5')}</td>
+
+                <td className=''>{department ? department.name : ''}</td>
+
+                <td className=''>{position ? position.name : ''}</td>
+
+                <td className=''>{plant ? plant.name : ''}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+    
+          
+  );
+};
+
+export default UserTable;
