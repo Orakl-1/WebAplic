@@ -25,10 +25,11 @@
 1. Клонируйте репозиторий
     https://github.com/Orakl-1/WebAplic.git
    в папке устанвоке Frontend в терминале ввести команду 
-   > npm install;
-   -------------
-   > npm build
-
+   ```
+    npm install
+   
+    npm build
+    ```
 Выполнить следующие команды:
 WebAplic\frontend> npm install
 WebAplic\frontend> npm run build
