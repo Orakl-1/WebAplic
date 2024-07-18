@@ -25,7 +25,9 @@
 1. Клонируйте репозиторий
     https://github.com/Orakl-1/WebAplic.git
 
-
+Выполнить следующие команды:
+WebAplic\frontend> npm install
+WebAplic\frontend> npm run build
 В проекте доступны следующие скрипты:
 
 ### npm start
