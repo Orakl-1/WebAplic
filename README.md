@@ -42,3 +42,10 @@
 ![alt text](https://github.com/Orakl-1/WebAplic/blob/main/scrREAME_HUB/imageScr/MongoDb_SCR_2.png)
 ![alt text](https://github.com/Orakl-1/WebAplic/blob/main/scrREAME_HUB/imageScr/MongoDb_SCR_3.png)
 ![alt text](https://github.com/Orakl-1/WebAplic/blob/main/scrREAME_HUB/imageScr/MongoDb_SCR_4.png)
+
+
+## Интерфейс React
+![](scrREAME_HUB/imageScr/Scrin_1.png)
+![](scrREAME_HUB/imageScr/Scrin_2.png)
+![](scrREAME_HUB/imageScr/Scrin_3.png)
+![](scrREAME_HUB/imageScr/Scrin_4.png)
