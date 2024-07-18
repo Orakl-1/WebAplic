@@ -45,8 +45,14 @@
 
 
 ## Интерфейс React
-
+### Users
 ![# Users](scrREAME_HUB/imageScr/Scrin_1.png)
+
+### Plant
 ![# Plant](scrREAME_HUB/imageScr/Scrin_2.png)
+
+### departments
 ![# departments](scrREAME_HUB/imageScr/Scrin_3.png)
+
+### positions
 ![# positions](scrREAME_HUB/imageScr/Scrin_4.png)
