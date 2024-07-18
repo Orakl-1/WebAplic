@@ -136,3 +136,21 @@ table {
   border-top: 1px solid white;
   margin: 10px 0;
 }
+
+.create-button{
+  background-color: rgb(0, 90, 0)
+}
+.create-options button {
+  background-color: green; /* Зеленый фон */
+  margin-left: 10px; /* Сдвиг вправо на 30px */
+  margin-right: 40px;
+}
+
+
+
+.delete-button{
+  background-color: rgb(90, 0, 0)
+}
+.delete-options button {
+  background-color: red; /* Красный фон */
+}

@@ -1,7 +1,7 @@
 const Plant = require('../models/Plant');
 const Department = require('../models/Department');
 const Position = require('../models/Position');
-const User = require('../models/User');
+const User = require('../models/userModel');
 
 // Добавление новых записей
 async function addData(req, res) {

@@ -16,6 +16,9 @@ const DataManagement = () => {
   const [showOverview, setShowOverview] = useState(false);
   const [showDepartments, setShowDepartments] = useState(false);
   const [showPosition, setShowPosition] = useState(false);
+  const [showCreateOptions, setShowCreateOptions] = useState(false);
+  const [showDeleteOptions, setShowDeleteOptions] = useState(false);
+
 
   const handleShowUserTable = () => {
     setShowUserTable(true);
@@ -57,6 +60,17 @@ const DataManagement = () => {
     setShowPosition(true);
   };
 
+
+  const handleToggleCreateOptions = () => {
+    // Переключение состояния показа кнопок выбора новой записи
+    setShowCreateOptions(!showCreateOptions);
+  };
+
+  const handleToggleDeleteOptions = () => {
+    // Переключение состояния показа кнопок удаления записи
+    setShowDeleteOptions(!showDeleteOptions);
+  };
+
   return (
     <div className='data-management-container'>
       <aside className='sidebar'>
@@ -71,7 +85,32 @@ const DataManagement = () => {
         <button onClick={handleShowDepartments}>departments / подразделения</button>
         <button onClick={handleShowPosition}>positions / должности</button>
         <div class ="LineButton"></div>
-        <button onClick="Create new">Создать новую запись</button>
+        <button className='create-button' onClick={handleToggleCreateOptions}>
+          Создать новую запись
+        </button>
+
+        {showCreateOptions && (
+          <div className='create-options'>
+            <button>Создать нового сотрудника</button>
+            <button>Создать новый завод</button>
+            <button>Создать новое подразделение</button>
+            <button>Создать новую должность</button>
+          </div>
+        )}
+
+        <button className='delete-button' onClick={handleToggleDeleteOptions}>
+          Удалить запись
+        </button>
+
+        {showDeleteOptions && (
+          <div className='delete-options'>
+            <button>Удалить сотрудника</button>
+            <button>Удалить завод</button>
+            <button>Удалить подразделение</button>
+            <button>Удалить должность</button>
+          </div>
+        )}
+
         <LogoutButton />
       </aside>
       <main className='content'>
