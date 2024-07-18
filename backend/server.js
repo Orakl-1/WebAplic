@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const router = express.Router();
-
+const path = require('path'); // Добавьте эту строку
 // Middleware для обработки JSON-запросов
 app.use(express.json());
 
@@ -20,8 +20,8 @@ app.use('/api/auth', require('./routes/authRoutes'));
 const protectedRoutes = require('./routes/protectedRoutes');
 app.use('/api', protectedRoutes);
 
-app.get('/', (req, res) => {
-  res.send('Добро пожаловать на наш API!');
+app.get('/login', (req, res) => {
+
 });
 
 // Роутер для вывода колекций данных
@@ -39,6 +39,14 @@ if (!uri) {
   console.error('MongoDB URI is not defined in environment variables');
   process.exit(1);
 }
+
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+// Добавьте этот маршрут для обработки всех запросов и отправки главной HTML страницы из папки 'build'
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
+
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
