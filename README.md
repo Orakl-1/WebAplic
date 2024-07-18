@@ -37,7 +37,8 @@
 
 Создание базы (предприятия/enterprises)
 
-![Создание базы данных и коллекции](\scrREAME_HUB\imageScr\MongoDb_SCR_1.png)
-(\scrREAME_HUB\imageScr\MongoDb_SCR_2.png)
-(\scrREAME_HUB\imageScr\MongoDb_SCR_3.png)
-(\scrREAME_HUB\imageScr\MongoDb_SCR_4.png)
+![Создание базы данных и коллекции](https://github.com/Orakl-1/WebAplic/blob/main/scrREAME_HUB/imageScr/MongoDb_SCR_1.png)
+
+![alt text](https://github.com/Orakl-1/WebAplic/blob/main/scrREAME_HUB/imageScr/MongoDb_SCR_2.png)
+![alt text](https://github.com/Orakl-1/WebAplic/blob/main/scrREAME_HUB/imageScr/MongoDb_SCR_3.png)
+![alt text](https://github.com/Orakl-1/WebAplic/blob/main/scrREAME_HUB/imageScr/MongoDb_SCR_4.png)
